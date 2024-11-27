@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>StarWatch</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link href="css\style.css" rel="stylesheet">
+		<script src="javascript\frontend.js"></script>
+		<script src="javascript\listar.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-navbar">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.php"><img src="img\claquete.png" width="40" height="40"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link active" href="index.php">Home</a>
+						<a class="nav-link" href="adicionar.phtml">Adicionar Filmes e Séries</a>
+						<a class="nav-link" href="listar.phtml">Meus Filmes e Séries</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container mt-3 mb-3">
+			<div class="h-auto ps-5 ms-5 pt-5 pb-3" style="justify-content: center; width: 90%;">
+				<h5 class="fw-bold text-body-emphasis mb-3">Meus filmes e séries</h5>
+				<form>
+					<input class="form-control me-2" type="search" id="buscaTitulo" placeholder="Buscar por Título...">
+					<div class="btn-group mt-1" role="group">
+							<input type="checkbox" class="btn-check inputChecked" name="tipoFilmeSerie" id="filme" autocomplete="off" onchange="updateLabelCheckbox(this)">
+							<label class="btn btn-outline-primary" for="filme">Filmes</label>
+
+							<input type="checkbox" class="btn-check" name="tipoFilmeSerie" id="serie" autocomplete="off" onchange="updateLabelCheckbox(this)">
+							<label class="btn btn-outline-primary" for="serie">Séries</label>
+						</div>
+					<br><br>
+					<button class="btn btn-outline-success" id="botaoBusca">Buscar</button>
+				</form>
+			</div>
+			<div class="h-auto p-5 align-middle">
+				<div class="row row-cols-1 row-cols-md-3 g-4" style="justify-content: center;">
+					
+				</div>
+			</div>
+			<div class="h-auto p-5 align-middle">
+				<nav>
+					<ul class="pagination" id="pageNumbers" style="justify-content: center;">
+						<li class="page-item">
+							<a class="page-link" id="prevButton" href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li class="page-item" id="proximo">
+							<a class="page-link" id="nextButton" href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="card m-2 p-1 h-auto d-none"  id="modeloCard" style="width: 200px;">
+				<img src="img\img-padrao.png" class="card-img-top h-auto fotoCapa" style="height: 280px !important;">
+				<div class="card-body">
+					<p class="card-title titulo"></p>
+					<p class="card-text anoLancamento"></p>
+					<div class="generos"></div>
+					<div class="rating-listados">
+						<input type="radio" id="star5" name="rating" value="5">
+						<label for="star5">&#9733;</label>
+						<input type="radio" id="star4" name="rating" value="4">
+						<label for="star4">&#9733;</label>
+						<input type="radio" id="star3" name="rating" value="3">
+						<label for="star3">&#9733;</label>
+						<input type="radio" id="star2" name="rating" value="2">
+						<label for="star2">&#9733;</label>
+						<input type="radio" id="star1" name="rating" value="1">
+						<label for="star1">&#9733;</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	</body>
+</html>

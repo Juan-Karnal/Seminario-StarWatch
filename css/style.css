@@ -1,0 +1,90 @@
+.rating {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+
+.rating input {
+	display: none;
+}
+
+.rating label {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+	color: orange;
+}
+
+.rating input:checked ~ label {
+	color: orange;
+}
+
+.rating-listados {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+
+.rating-listados input {
+	display: none;
+}
+
+.rating-listados label {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.rating-listados input:checked ~ label {
+	color: orange;
+}
+
+.btn-primary {
+	background-color: rgb(92, 0, 179);
+	border-color: rgb(149, 36, 255);
+}
+
+.btn-primary:hover {
+	background-color: rgb(132, 0, 255);
+	border-color: rgb(92, 0, 179);
+}
+
+.bg-navbar {
+	background-color: rgb(124, 3, 238);
+}
+
+.nav-link {
+	color: white;
+}
+
+.nav-link:hover {
+	color: rgb(255, 255, 255);
+	text-shadow: 2px 2px 2px rgb(83, 2, 158);
+	transition: 0.6s;
+}
+
+.active {
+	color: rgb(239, 223, 255) !important;
+}
+
+.titulo {
+	font-weight: 500;
+}
+
+.titulo:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.btn-outline-primary {
+	border-color: rgb(149, 36, 255) !important;
+	color: rgb(92, 0, 179) !important;
+}
+
+.btn-checked {
+	background-color: rgb(92, 0, 179) !important;
+	border-color: rgb(149, 36, 255) !important;
+	color: rgb(255, 255, 255) !important;
+}
